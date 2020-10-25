@@ -34,8 +34,8 @@ public class AddressController {
     }
 
     @GetMapping
-    public ResponseEntity<List<AddressApi>> getAll() {
-        return ResponseEntity.ok(addressService.findAll().stream().map(address -> address.toModel()).collect(Collectors.toList()));
+    public ResponseEntity<List<Address>> getAll() {
+        return ResponseEntity.ok(addressService.findAll());
     }
 
     @PutMapping("/{id}")
