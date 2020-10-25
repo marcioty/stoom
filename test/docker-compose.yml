@@ -1,0 +1,17 @@
+version: "3.4"
+
+networks:
+  localnet:
+
+services:
+
+  stoom:
+    image: stoom/application:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "5432:5432"
+    networks:
+      - localnet

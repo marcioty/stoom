@@ -1,0 +1,26 @@
+spring:
+  datasource:
+#    url: jdbc:h2:file:./data/stoom
+    url: jdbc:h2:mem:stoom
+    username: stoom
+    password: stoom
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    default-schema: public
+  h2:
+    console:
+      enabled: true
+  jackson:
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+
+stoom:
+  google:
+    api:
+      api-key: AIzaSyDTK0igIQTCi5EYKL9tzOIJ9N6FUASGZos
+      base-url: https://maps.googleapis.com/maps/api/geocode/json

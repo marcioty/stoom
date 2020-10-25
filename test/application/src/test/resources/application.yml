@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:stoom
+
+stoom:
+  google:
+    api:
+      api-key: AIzaSyDTK0igIQTCi5EYKL9tzOIJ9N6FUASGZos
+      base-url: https://maps.googleapis.com/maps/api/geocode/json
